@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shumadhar Reddy Seelam — Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body data-section="home">
+
+  <!-- Fixed layers (below everything) -->
+  <canvas id="bgCanvas"></canvas>
+  <div id="sectionGlow"></div>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span>SRS<span class="logo-bracket">]</span>
+      </a>
+      <ul id="navLinks">
+        <li><a href="#home"          class="nl">Home</a></li>
+        <li><a href="#about"         class="nl">About</a></li>
+        <li><a href="#skills"        class="nl">Skills</a></li>
+        <li><a href="#experience"    class="nl">Experience</a></li>
+        <li><a href="#projects"      class="nl">Projects</a></li>
+        <li><a href="#education"     class="nl">Education</a></li>
+        <li><a href="#publications"  class="nl">Publications</a></li>
+        <li><a href="#contact"       class="nl">Contact</a></li>
+      </ul>
+      <div class="nav-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Available</span>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Dark Mode">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <p class="hero-sys" id="heroSys">&gt; initialising portfolio.sh...</p>
+      <h1 class="hero-name">
+        <span class="hn-line">Shumadhar</span>
+        <span class="hn-line hn-accent">Reddy Seelam</span>
+      </h1>
+      <p class="hero-role">
+        <span class="role-fixed">I engineer&nbsp;</span>
+        <span id="typingText"></span><span class="cursor">_</span>
+      </p>
+      <p class="hero-desc">
+        MS&nbsp;CS&nbsp;·&nbsp;George Mason University&nbsp;&nbsp;|&nbsp;&nbsp;Autonomous&nbsp;AI&nbsp;Agents&nbsp;·&nbsp;Distributed&nbsp;Systems&nbsp;·&nbsp;Cloud&nbsp;Infrastructure
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact"  class="btn btn-ghost">Contact Me</a>
+      </div>
+      <div class="hero-links">
+        <a href="mailto:seelamshumadharreddy08@gmail.com" class="icon-link" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/shumadharreddy/" target="_blank" class="icon-link" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/Shumadhar08" target="_blank" class="icon-link" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-track"><div class="scroll-fill"></div></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="sec-label">// about</span>
+        <h2>Who I Am</h2>
+      </header>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>I'm a <strong>Master's student in Computer Science</strong> at George Mason University, building systems that bridge intelligent AI agents with production-grade infrastructure.</p>
+          <p>My work spans <strong>generative AI, distributed backends, and cloud-native engineering</strong>. I've shipped at startups — wearing multiple hats, navigating ambiguity, and delivering under pressure.</p>
+          <p>I care about clean architecture, measurable performance gains, and code that scales beyond its first deployment.</p>
+          <div class="about-kpis">
+            <div class="kpi"><span class="kpi-val" data-target="2">0</span><span class="kpi-plus">+</span><span class="kpi-label">Years Shipped</span></div>
+            <div class="kpi"><span class="kpi-val" data-target="5">0</span><span class="kpi-plus">+</span><span class="kpi-label">Projects</span></div>
+            <div class="kpi"><span class="kpi-val" data-target="2">0</span><span class="kpi-label">Publications</span></div>
+          </div>
+        </div>
+        <div class="id-card reveal">
+          <div class="idc-top">
+            <div class="idc-avatar">SRS</div>
+            <div>
+              <p class="idc-name">Shumadhar Reddy Seelam</p>
+              <p class="idc-role">Software Engineer · MS CS</p>
+            </div>
+          </div>
+          <ul class="idc-list">
+            <li><span class="idc-key">Location</span><span class="idc-val">Fairfax, VA</span></li>
+            <li><span class="idc-key">University</span><span class="idc-val">George Mason</span></li>
+            <li><span class="idc-key">Email</span><span class="idc-val">seelamshumadharreddy08@gmail.com</span></li>
+            <li><span class="idc-key">Phone</span><span class="idc-val">571-546-2302</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="sec-label">// skills</span>
+        <h2>Tech Stack</h2>
+      </header>
+      <div class="skills-grid">
+
+        <div class="skill-block reveal">
+          <h3><span class="sb-icon">⚡</span>Languages</h3>
+          <div class="tag-row">
+            <span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">Python</span>
+            <span class="tag">Go</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span>
+            <span class="tag">SQL</span><span class="tag">C++</span>
+          </div>
+        </div>
+
+        <div class="skill-block reveal">
+          <h3><span class="sb-icon">🤖</span>AI &amp; Agentic Systems</h3>
+          <div class="tag-row">
+            <span class="tag hi">Generative AI</span><span class="tag hi">LLMs</span>
+            <span class="tag hi">AI Agents</span><span class="tag hi">Prompt Engineering</span>
+            <span class="tag hi">RAG</span><span class="tag hi">Voice / Transcription</span>
+            <span class="tag hi">LangChain</span>
+          </div>
+        </div>
+
+        <div class="skill-block reveal">
+          <h3><span class="sb-icon">☁️</span>Backend &amp; Infrastructure</h3>
+          <div class="tag-row">
+            <span class="tag">RESTful APIs</span><span class="tag">Node.js</span><span class="tag">Microservices</span>
+            <span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">GCP</span>
+            <span class="tag">CI/CD</span><span class="tag">Distributed Systems</span>
+          </div>
+        </div>
+
+        <div class="skill-block reveal">
+          <h3><span class="sb-icon">🗄️</span>Databases</h3>
+          <div class="tag-row">
+            <span class="tag">PostgreSQL</span><span class="tag">MySQL</span>
+            <span class="tag">MongoDB</span><span class="tag">NoSQL</span><span class="tag">Schema Design</span>
+          </div>
+        </div>
+
+        <div class="skill-block reveal">
+          <h3><span class="sb-icon">🔧</span>Practices</h3>
+          <div class="tag-row">
+            <span class="tag">Git</span><span class="tag">Agile</span><span class="tag">OOP</span>
+            <span class="tag">Unit Testing</span><span class="tag">Build Automation</span>
+            <span class="tag">HIPAA &amp; Security</span><span class="tag">Full Product Lifecycle</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" class="section">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="sec-label">// experience</span>
+        <h2>Work History</h2>
+      </header>
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-marker"><div class="tl-dot"></div></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div>
+                <h3>AI Software Engineering Intern</h3>
+                <p class="tl-sub">Agentic Systems · S3sol Inc.</p>
+              </div>
+              <div class="tl-meta">
+                <span>Jan 2024 – May 2024</span>
+                <span>Remote, India</span>
+              </div>
+            </div>
+            <ul class="tl-pts">
+              <li>Built generative AI agents from zero-to-one using Python and TypeScript; designed autonomous production-grade systems that directly improved end-user resolution rates.</li>
+              <li>Integrated robust APIs and transcription models inside a rapid-iteration startup environment, eliminating workflow inefficiencies and reducing task execution latency.</li>
+              <li>Participated in design discussions with high autonomy, shaping scalable architectures and delivering a 5-star product experience.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">TypeScript</span>
+              <span class="tag">Generative AI</span><span class="tag">LLMs</span><span class="tag">APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker"><div class="tl-dot"></div></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div>
+                <h3>Software Engineering Intern</h3>
+                <p class="tl-sub">Cloud &amp; Security · Clonz Biotech</p>
+              </div>
+              <div class="tl-meta">
+                <span>Aug 2023 – Nov 2023</span>
+                <span>Hybrid, India</span>
+              </div>
+            </div>
+            <ul class="tl-pts">
+              <li>Architected secure, scalable cloud-native apps on AWS/GCP, ensuring strict data privacy and robust infrastructure for biotechnology and healthcare datasets.</li>
+              <li>Collaborated cross-functionally with technical stakeholders to tailor software in highly ambiguous production environments.</li>
+              <li>Leveraged automated CI/CD pipelines within an agile team to experiment rapidly and push reliable backend features into production.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">AWS</span><span class="tag">GCP</span>
+              <span class="tag">CI/CD</span><span class="tag">Cloud Security</span><span class="tag">Distributed Systems</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="section">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="sec-label">// projects</span>
+        <h2>Built Things</h2>
+      </header>
+      <div class="proj-grid">
+
+        <article class="proj-card reveal">
+          <div class="pc-top">
+            <span class="pc-icon">🛡️</span>
+            <a href="https://github.com/Shumadhar08/DefenseMatrix" target="_blank" class="pc-gh">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+          <h3>DefenseMatrix</h3>
+          <p class="pc-sub">Autonomous Agent Workflow Engine</p>
+          <p class="pc-desc">Zero-to-one autonomous AI agent ecosystem built in Python with advanced LLMs. Orchestrates complex distributed data workflows with high precision and comprehensive CI/CD pipelines.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">Voice AI</span><span class="tag">OOP</span><span class="tag">CI/CD</span>
+          </div>
+        </article>
+
+        <article class="proj-card reveal">
+          <div class="pc-top"><span class="pc-icon">☁️</span></div>
+          <h3>Cloud-Native Infrastructure Automation</h3>
+          <p class="pc-sub">Distributed Build &amp; Deploy Platform</p>
+          <p class="pc-desc">Robust platform tooling using distributed systems concepts and Git-based build automation. CI pipelines and relational DB schemas processing high-throughput telemetry with measurable reliability gains.</p>
+          <div class="tag-row">
+            <span class="tag">Go</span><span class="tag">Python</span><span class="tag">Docker</span><span class="tag">Distributed Systems</span>
+          </div>
+        </article>
+
+        <article class="proj-card reveal">
+          <div class="pc-top"><span class="pc-icon">🧠</span></div>
+          <h3>3D Visual Data Semantic ML Pipeline</h3>
+          <p class="pc-sub">Deep Learning Optimisation</p>
+          <p class="pc-desc">High-performance algorithms to process complex 3D datasets. Optimised document-database retrieval logic, reducing computational latency by <strong>25%</strong> while adhering to clean-code standards.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Deep Learning</span><span class="tag">MongoDB</span><span class="tag">Algorithms</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section id="education" class="section">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="sec-label">// education</span>
+        <h2>Academic Background</h2>
+      </header>
+      <div class="edu-grid">
+
+        <div class="edu-card reveal">
+          <div class="edu-badge">MS</div>
+          <div class="edu-body">
+            <div class="edu-row">
+              <h3>George Mason University</h3><span>🇺🇸</span>
+            </div>
+            <p class="edu-deg">Master of Science in Computer Science</p>
+            <div class="edu-meta">
+              <span>Aug 2024 – May 2026</span><span>Fairfax, VA</span>
+            </div>
+            <p class="edu-desc">Advanced studies in distributed systems, machine learning, and large-scale software engineering.</p>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-badge">BTech</div>
+          <div class="edu-body">
+            <div class="edu-row">
+              <h3>SRM Institute of Science and Technology</h3><span>🇮🇳</span>
+            </div>
+            <p class="edu-deg">Bachelor of Technology in Computer Science</p>
+            <div class="edu-meta">
+              <span>Aug 2020 – May 2024</span><span>India</span>
+            </div>
+            <p class="edu-desc">Strong foundation in algorithms, data structures, OOP, and systems programming. Published patent and research paper during undergrad.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PUBLICATIONS ── -->
+  <section id="publications" class="section">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="sec-label">// publications</span>
+        <h2>Research &amp; Patents</h2>
+      </header>
+      <div class="pub-grid">
+
+        <div class="pub-card reveal">
+          <span class="pub-badge pat">Patent</span>
+          <span class="pub-date">Sep 2023</span>
+          <h3>Mobile Applications for Smart City Logistics</h3>
+          <p class="pub-id">App No. 202341044493&nbsp;A</p>
+          <p class="pub-desc">Scalable data structures executing predictive modelling on high-velocity datasets, providing efficient software architectures for extensible smart-city system integration.</p>
+          <a href="https://drive.google.com/file/d/1RXzHEEAuM24XjFF3p3ZpGQA72bFnqZ2C/view?usp=drive_link" target="_blank" class="pub-link">View Patent ↗</a>
+        </div>
+
+        <div class="pub-card reveal">
+          <span class="pub-badge res">Research</span>
+          <span class="pub-date">Jul 2024</span>
+          <h3>Secure Cloud Guardian: Predictive Data Modeling</h3>
+          <p class="pub-id">Peer-Reviewed Publication</p>
+          <p class="pub-desc">Peer-reviewed research detailing robust predictive inference methodologies for enterprise data tracking, validating backend frameworks designed to protect large-scale systems from downtime.</p>
+          <a href="https://drive.google.com/file/d/1P2YV1mfGj_9xw72gvmymJvW-OXYQYjFY/view?usp=drive_link" target="_blank" class="pub-link">Read Paper ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="sec-label">// certifications</span>
+        <h2>Credentials</h2>
+      </header>
+      <div class="cert-grid">
+        <div class="cert-card reveal"><span class="cert-icon">🏆</span><h3>HackerRank Verified</h3><p>Java · Python · Go</p></div>
+        <div class="cert-card reveal"><span class="cert-icon">🤖</span><h3>LangChain for LLM Development</h3><p>DeepLearning.AI</p></div>
+        <div class="cert-card reveal"><span class="cert-icon">🔌</span><h3>API Fundamentals Expert</h3><p>Postman</p></div>
+        <div class="cert-card reveal"><span class="cert-icon">🐍</span><h3>IT Automation with Python</h3><p>Google</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="sec-label">// contact</span>
+        <h2>Let's Talk</h2>
+      </header>
+      <div class="contact-wrap reveal">
+        <p class="contact-intro">Currently exploring new opportunities. Open to full-time roles, internships, and interesting collaborations.</p>
+        <div class="contact-links">
+          <a href="mailto:seelamshumadharreddy08@gmail.com" class="cl">
+            <span class="cl-key">email</span>
+            <span class="cl-val">seelamshumadharreddy08@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/shumadharreddy/" target="_blank" class="cl">
+            <span class="cl-key">linkedin</span>
+            <span class="cl-val">linkedin.com/in/shumadharreddy</span>
+          </a>
+          <a href="tel:5715462302" class="cl">
+            <span class="cl-key">phone</span>
+            <span class="cl-val">571-546-2302</span>
+          </a>
+        </div>
+        <a href="mailto:seelamshumadharreddy08@gmail.com" class="btn btn-primary" style="margin-top:2.5rem">Send Message</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span class="ft-copy">© 2025 Shumadhar Reddy Seelam</span>
+      <span class="ft-made">Designed &amp; Built from scratch</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
