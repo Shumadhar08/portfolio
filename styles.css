@@ -1197,6 +1197,14 @@ body.light-mode .moon-icon {
   color:var(--text-2); 
   line-height:1.7;
 }
+.edu-coursework { 
+  font-size:0.78rem; 
+  color:var(--text-3); 
+  line-height:1.6;
+  margin-top:0.8rem;
+  padding-top:0.8rem;
+  border-top:1px solid rgba(var(--acc-rgb), 0.2);
+}
 
 /* ─────────────────────────────────────────────
    PUBLICATIONS
