@@ -21,6 +21,7 @@ const THEMES = {
   projects:      { mode:'blueprint', colors:['#38bdf8','#0ea5e9','#06b6d4','#7dd3fc','#bae6fd'], count:65 },
   education:     { mode:'orbit',     colors:['#6d9fff','#60a5fa','#93c5fd','#3b82f6','#bfdbfe'], count:55 },
   publications:  { mode:'pages',     colors:['#ffa040','#fbbf24','#f59e0b','#fde68a','#fff3b0'], count:50 },
+  resume:        { mode:'blueprint', colors:['#06b6d4','#0ea5e9','#38bdf8','#7dd3fc','#bae6fd'], count:75 },
   certifications:{ mode:'net',       colors:['#34d399','#10b981','#6ee7b7','#00ff88','#a7f3d0'], count:80 },
   contact:       { mode:'wave',      colors:['#00e5c8','#06b6d4','#67e8f9','#a5f3fc','#34d399'], count:65 },
 };
